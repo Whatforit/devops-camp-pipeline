@@ -37,7 +37,7 @@ pipeline {
                         }
                     }
                 }
-            }
+            
             //TODO("Lab 4 - Artifact Management"): clean local docker app image
               always {
                     echo "Clean local $APP_IMAGE_NAME image"
@@ -50,7 +50,9 @@ pipeline {
                         }
                     }
                 }
+            
             }
+        }
         
         stage('Database docker build') {
             steps {
@@ -65,7 +67,7 @@ pipeline {
                         }
                     }
                 }
-            }
+            
         
             //TODO("Lab 4 - Artifact Management"): clean local docker db image
               post {
@@ -80,6 +82,7 @@ pipeline {
                         }
                     }
                 }
+            }
             }
         //TODO("Lab 7 - Automated Security Scans"): add a stage
         stage('Deploy') {
