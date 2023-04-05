@@ -77,8 +77,8 @@ pipeline {
                             echo err.getMessage()
                         }
                     }
-                }
-            }
+                
+            
         }
         //TODO("Lab 7 - Automated Security Scans"): add a stage
         stage('Deploy') {
